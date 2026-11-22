@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>The Flatside Archive</title>
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+    </head>
+    <body>
+        <h1>Feedback</h1>
+        <hr>
+        <nav><a href="main.html">Home</a> | <a href="contact.html">Contact</a> | <a href="search.html">All Resources</a> | <a href="FAQ.html">FAQ</a> | <a href="form.html">Suggestions</a></nav>
+        <hr>
+        <p><br>You can suggest additions to the website here! All forms are anonymous.<br><br></p>
+
+        <fieldset>
+            <!-- 1 fieldset is used due to there being a low amount of questions -->
+
+            <label>Which type of feedback do you have?</label><br>
+            <input type="checkbox" id="new-source" name="feedback-type" value="New Source">
+            <label for="new-source" class="label">Suggestion for a new source to add</label><br>
+            <input type="checkbox" id="suggestion" name="feedback-type" value="Suggestion">
+            <label for="suggestion" class="label">Other Suggestion</label><br>
+            <input type="checkbox" id="bug-report" name="feedback-type" value="Bug Report">
+            <label for="bug-report" class="label">Bug Report</label><br>
+            <input type="checkbox" id="other" name="feedback-type" value="Other">
+            <label for="other" class="label">Other</label><br><br>
+
+            <label>Your input:</label><br>
+            <textarea name="input" rows="3" cols="65"></textarea>
+            <br><br>
+
+            <label>Is there any relevant links related to your feedback?</label><br>
+            <input type="radio" id="yes" name="has-links" value="Yes">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="has-links" value="No">
+            <label for="no">No</label><br>
+            <br>
+            <input type="submit">
+            <input type="reset" onclick="">
+        </fieldset>
+
+        <script src="form.js"></script>
+
+    </body>
+</html>

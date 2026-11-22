@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap'); /* "BBH Bogle" */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'); /* "Manrope" */
 body {
     background-color: #101010;
     color: white;
 }
 
-h1, nav {
+h1, nav, .center {
     text-align: center;
 }
 
@@ -11,10 +13,181 @@ a {
     color: aqua;
 }
 
+.label:hover {
+    font-weight: bold;
+}
+
+a:hover {
+    font-weight: bolder;
+}
+
 hr {
     border-color: white;
 }
 
+iframe {
+    border: 0;
+    border-radius: 15px;
+}
+
 #cr {
     font-size: 10px;
+}
+
+.icons {
+    font-weight: bold;
+    font-size: 150%;
+    cursor: pointer;
+}
+
+.border {
+    border: 3px solid white;
+}
+
+.sourceTitle {
+    font-family: "BBH Bogle";
+    font-size: 2.5em;
+    margin: 0px;
+    padding: 20px;
+    font-weight: bold;
+    /* display:block; */
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.sourceTitle, h1 {
+    cursor: default;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    width: calc(100% - 12px);
+    gap: 5px;
+    background-color: #6060d0;
+    grid-template-areas:
+    "grid-header grid-header"    
+    "grid-menu grid-content"
+    "grid-footer grid-footer"
+    "grid-footer2 grid-footer2";
+    grid-template-columns: 1fr 3fr;
+}
+
+.gridHeader {
+    grid-area: grid-header;
+    text-align: center;
+}
+.gridContent {
+    grid-area: grid-content;
+}
+.gridFooter {
+    grid-area: grid-footer;
+}
+.gridMenu {
+    grid-area: grid-menu;
+}
+.gridFooter2 {
+    grid-area: grid-footer2;
+}
+
+.gridHeader, .gridContent, .gridFooter, .gridMenu, .gridFooter2 {
+  background-color: #202020;
+  padding: 10px;
+}
+
+h1, h2 {
+    font-family: "BBH Bogle";
+}
+
+.sourceLink {
+    margin: 0px;
+    display:block;
+    width: 25%;
+    margin: auto;
+    font-weight: bold;
+    font-size: 130%;
+    font-family: "Manrope";
+    /* padding: 5vh; */
+    /* background-color: #303030; */
+    margin-bottom: 1vh;
+    padding: 2vh !important;
+}
+.sourceLink:hover {
+    color: white;
+    font-weight: 1000;
+    font-size: 140%;
+}
+
+.source {
+    background-color: #202020;
+    border-radius: 10px;
+    margin: 1vw 5px;
+    text-align: center;
+    /* display: flex; */
+    flex-direction: column;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.sourceArea {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 95%;
+
+    margin: 0% 2.5%;
+    background-color: #303030;
+    border-radius: 15px;
+}
+
+.sourceImg {
+    float: right;
+    /* margin-right: 0; */
+    /* width:50%; */
+    height: calc(2em + 40px);
+}
+
+.sourceDesc {
+    padding: 1vw 0px;
+}
+
+#search {
+    width: 75%;
+    text-align: center;
+    background-color: #303030;
+    margin: 1vw;
+    margin-left: 12.5%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 3vh;
+    font-size: 150%;
+    color: white;
+    /* TODO add color when highlighted */
+}
+
+.ccImg {
+    /* Original Image is black, so this turns it white */
+    -webkit-filter: invert(1);
+   filter: invert(1);
+}
+
+textarea {
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 899px) {
+    /* Using vh, vw and % instead of pixels for the majority of styles helped the page transition
+    seamlessly between viewports, so I couldn't find many things to add into the breakponits */
+    
+    textarea {
+        /* Textarea styled using height and width instead of cols and rows as there's no cols/rows option in css */
+        height: 5vh;
+        width: 40vh;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    textarea {
+        height: 4vh;
+        width: 40vw;
+    }
 }
